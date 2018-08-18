@@ -1,0 +1,140 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PSE - Registro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link type="text/css" href="css/style.css" rel="stylesheet">
+
+</head>
+<body onload="checkBrowser();">
+    <form id="form1" role="form" data-fv-framework="bootstrap" novalidate="novalidate" class="fv-form fv-form-bootstrap"><button type="submit" class="fv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+    <div id="header">
+        <div class="main">
+            <div class="container nopadding">
+                <div class="logo-pse col-xs-12 nopadding">
+                    <img style="width: 147px; height: 147px;" src="images/pse.png" alt="PSE - Pagos Seguros en Línea" title="PSE - Pagos Seguros en Línea">
+                    <p>
+                        Fácil, rápido y seguro</p>
+                </div>
+            </div>
+        </div>
+        <div class="top">
+            <p>
+                <i class="fa fa-question-circle"></i><a href="#" onclick="FullScreenWindow('FAQ.html','FAQ');">
+                    ¿Preguntas frecuentes?</a></p>
+        </div>
+    </div>
+    <div class="content container">
+        <div class="jumbotron">
+            <h2 class="title text-center">
+                Por favor, selecciona la opción deseada:</h2>
+            <div class="col-xs-12 col-md-10 col-centered box-content">
+                <div class="list-person">
+                    <div class="col-xs-12 col-sm-6 col-sm-offset-3 nopadding">
+                        <div class="col-xs-6 left nopadding">
+                            <label>
+                                <input type="radio" id="rdUsertype0" name="person_option" checked="checked">
+                                <span>
+                                    <img style="width: 32px; height: 32px;" src="images/persona_natural.png"></span>
+                                <p>
+                                    Persona natural</p>
+                            </label>
+                        </div>
+                        <div class="col-xs-6 right nopadding">
+                            <label>
+                                <input type="radio" id="rdUsertype1" name="person_option">
+                                <span><i class="fa fa-building-o">
+                                  <img style="width: 70px; height: 70px;" src="images/empresa.png">
+                                </i></span>
+                                <p>
+                                    Persona juridica</p>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+                <div class="list-option">
+                    <label>
+                        <input type="radio" id="rdOptionCreate" name="action_person">
+                        <span><i class="fa fa-check-circle-o"></i>Quiero registrarme ahora</span>
+                    </label>
+                    <label>
+                        <input type="radio" id="rdOptionUpdate" name="action_person">
+                        <span><i class="fa fa-arrow-circle-o-up"></i>Quiero actualizar mi registro</span>
+                    </label>
+                    <label>
+                        <input type="radio" id="rdOptionDelete" name="action_person">
+                        <span><i class="fa fa-times-circle-o"></i>Quiero borrar mi registro</span>
+                    </label>
+                </div>
+                <div class="clear">
+                </div>
+                <div class="confirmation-form-box" id="trPN1" style="display: none;">
+                    <div class="form-group">
+                        <label>
+                            <span>
+                                <img src="assets/icon-mail.png"></span> E-mail</label>
+                        <input type="text" class="form-control" id="PNEMail" name="PNEMail" placeholder="E-mail" maxlength="120" data-toggle="tooltip" data-placement="top" data-fv-notempty="true" data-fv-notempty-message="El campo e-mail es requerido" data-fv-regexp="true" data-fv-regexp-regexp="^[^@\s]+@([^@\s]+\.)+[^@\s]+$" data-fv-regexp-message="El campo e-mail es inválido" data-fv-stringlength-max="120" data-fv-stringlength-message="El campo e-mail debe tener hasta 120 caracteres" data-fv-field="PNEMail" title="" data-original-title="Ingresa el correo electrónico asociado a tu registro">
+                    <small class="help-block" data-fv-validator="notEmpty" data-fv-for="PNEMail" data-fv-result="NOT_VALIDATED" style="display: none;">El campo e-mail es requerido</small><small class="help-block" data-fv-validator="regexp" data-fv-for="PNEMail" data-fv-result="NOT_VALIDATED" style="display: none;">El campo e-mail es inválido</small><small class="help-block" data-fv-validator="stringLength" data-fv-for="PNEMail" data-fv-result="NOT_VALIDATED" style="display: none;">El campo e-mail debe tener hasta 120 caracteres</small></div>
+                </div>
+                <div class="confirmation-form-box" id="trPJ1" style="display: none;">
+                    <div class="form-group">
+                        <label>
+                            <span>
+                                <img src="assets/icon-mail.png"></span> NIT</label>
+                        <input type="text" class="form-control" id="PJNIT" name="PJNIT" placeholder="NIT" data-toggle="tooltip" data-placement="top" maxlength="15" data-fv-notempty="true" data-fv-notempty-message="El campo NIT es requerido" data-fv-regexp="true" data-fv-regexp-regexp="^[a-zA-Z0-9]{1,15}$" data-fv-regexp-message="El NIT debe ser alfanumérico de 1 hasta 15 caracteres" data-fv-field="PJNIT" title="" data-original-title="Ingresa el NIT asociado a tu registro">
+                    <small class="help-block" data-fv-validator="notEmpty" data-fv-for="PJNIT" data-fv-result="NOT_VALIDATED" style="display: none;">El campo NIT es requerido</small><small class="help-block" data-fv-validator="regexp" data-fv-for="PJNIT" data-fv-result="NOT_VALIDATED" style="display: none;">El NIT debe ser alfanumérico de 1 hasta 15 caracteres</small><small class="help-block" data-fv-validator="stringLength" data-fv-for="PJNIT" data-fv-result="NOT_VALIDATED" style="display: none;">Please enter a value with valid length</small></div>
+                    <div class="form-group">
+                        <label>
+                            <span>
+                                <img src="assets/icon-mail.png"></span> E-mail</label>
+                        <input type="text" class="form-control" id="PJEMail" name="PJEMail" placeholder="E-mail" maxlength="120" data-toggle="tooltip" data-placement="top" data-fv-notempty="true" data-fv-notempty-message="El campo e-mail es requerido" data-fv-regexp="true" data-fv-regexp-regexp="^[^@\s]+@([^@\s]+\.)+[^@\s]+$" data-fv-regexp-message="El campo e-mail es inválido" data-fv-stringlength-max="120" data-fv-stringlength-message="El campo e-mail debe tener hasta 120 caracteres" data-fv-field="PJEMail" title="" data-original-title="Ingresa el correo electrónico asociado a tu registro">
+                    <small class="help-block" data-fv-validator="notEmpty" data-fv-for="PJEMail" data-fv-result="NOT_VALIDATED" style="display: none;">El campo e-mail es requerido</small><small class="help-block" data-fv-validator="regexp" data-fv-for="PJEMail" data-fv-result="NOT_VALIDATED" style="display: none;">El campo e-mail es inválido</small><small class="help-block" data-fv-validator="stringLength" data-fv-for="PJEMail" data-fv-result="NOT_VALIDATED" style="display: none;">El campo e-mail debe tener hasta 120 caracteres</small></div>
+                </div>
+                <div class="confirmation-form-box" id="trValidation" style="display: none;">
+                    <div class="form-group">
+                        <label>
+                            <span>
+                                <img src="assets/icon-view.png"></span><span id="lblQuestion" text=""></span>
+                        </label>
+                        <input type="text" class="form-control" id="QuestionResponse" name="QuestionResponse" placeholder="Respuesta" maxlength="64" data-toggle="tooltip" data-placement="top" data-fv-notempty="true" data-fv-notempty-message="La respuesta a la pregunta de seguridad es requerida" data-fv-field="QuestionResponse" title="" data-original-title="Ingresa la respuesta a la pregunta de seguridad">
+                    <small class="help-block" data-fv-validator="notEmpty" data-fv-for="QuestionResponse" data-fv-result="NOT_VALIDATED" style="display: none;">La respuesta a la pregunta de seguridad es requerida</small><small class="help-block" data-fv-validator="stringLength" data-fv-for="QuestionResponse" data-fv-result="NOT_VALIDATED" style="display: none;">Please enter a value with valid length</small></div>
+                </div>
+                <div class="row visible-lg visible-md">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="text-center btns">
+                            <button type="button" id="btnRegressar" class="btn btn-primary" onclick="window.location.href='http://www.comprasypagospse.com';">
+                                Regresar</button>
+                            <button type="button" id="btnSeguir" class="btn btn-primary" onclick="seguir();">
+                                Seguir</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="contact-box container">
+            <div class="row visible-md visible-lg">
+                <div class="col-md-3 col-lg-3">
+                    <span class="pull-left">
+                        <img style=" width: 130px; height: 126;" src="images/logo-ach.png" class="img-responsive">
+                    </span>
+                </div>
+                <div class="col-md-4 col-lg-4 col-md-offset-5 col-lg-offset-5">
+                    <span class="pull-right boxha">
+                        <p>
+                            Para mayor información comunícate con nosotros<br>
+                            <i class="fa fa-mobile"></i>en Bogotá +57 (1) 3808890 opción 2<br>
+                            <i class="fa fa-envelope"></i>o escríbenos <a href="mailto:serviciopse@achcolombia.com.co" target="_blank">serviciopse@achcolombia.com.co</a><br>
+                            Visita <a href="http://www.comprasypagospse.com" target="_blank">www.comprasypagospse.com</a></p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+  </form>
+
+</body>
+</html>
